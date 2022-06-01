@@ -11,7 +11,7 @@
 
 int main() {
     // Initialize Window, Timer to update things, and get font
-    sf::RenderWindow window(sf::VideoMode(350, 100), "BinaryClock", sf::Style::Close);
+    sf::RenderWindow window(sf::VideoMode(400, 100), "BinaryClock", sf::Style::Close);
     sf::Clock timer;
     sf::Font font;
     if (!font.loadFromFile("DS-DIGIB.ttf")) {
