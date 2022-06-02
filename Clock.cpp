@@ -47,10 +47,10 @@ int main() {
                 window.close();
         }
 
-        // If key C is pressed, increment colorVal to change colors
+        // If key C is pressed and window has focus, increment colorVal to change colors
         /* Also check to see if it has been more than 300 miliseconds from the 
         last time C has been pressed to prevent it from changing too fast */
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::C)) {
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::C) && window.hasFocus()) {
             if (timer.getElapsedTime().asMilliseconds() >= timeC.asMilliseconds() + 300) {
                 if (colorVal < 3)
                     colorVal++;
