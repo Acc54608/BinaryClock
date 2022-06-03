@@ -12,6 +12,7 @@
 int main() {
     // Initialize Window, Timer to update things, and get font
     sf::RenderWindow window(sf::VideoMode(400, 100), "BinaryClock", sf::Style::Close);
+    window.setFramerateLimit(60);
     sf::Clock timer;
     sf::Font font;
     if (!font.loadFromFile("DS-DIGIB.ttf")) {
@@ -46,6 +47,7 @@ int main() {
             if (event.type == sf::Event::Closed)
                 window.close();
         }
+
             // If key C is pressed and window has focus, increment colorVal to change colors
             /* Also check to see if it has been more than 300 miliseconds from the
             last time C has been pressed to prevent it from changing too fast */
